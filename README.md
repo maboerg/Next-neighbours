@@ -7,7 +7,7 @@ An open problem concerning next neighbours in a planar graph
 
 The Next Neighbour Problem has a simple explanation in real world terms. Consider a village where, on a certain day, everyone visits her or his next neighbour.
 
-To make things easier we will think of `n` houses with pairwise different distances.
+To make things easier we will think of `**n**` houses with pairwise different distances.
 
 For most arrangements of houses there will be some villagers who do not receive visitors.
 
