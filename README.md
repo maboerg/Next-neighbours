@@ -45,6 +45,7 @@ t2 = Table[t[[tposition[[m]]]], {m, Length[tposition]}];
 t1 = Complement[t, t2];
 
 Print["Visited  ", Length[t2], "  ", t2]
+
 Print["Not visited  ", Length[t1], "  ", t1]
 
 Show[ListPlot[t1, PlotStyle -> {Black, PointSize[Large]}], 
