@@ -19,3 +19,29 @@ Figure 1  -  n=10, m=5
 
 Here is Mathematica code for random arrangement of houses:
 
+***********************************************************************************
+(* Neighbours random *)
+
+t = Table[{Random[], Random[]}, {i, 16}];
+
+n = Length[t];
+
+td = Table[
+   ReplacePart[Table[EuclideanDistance[t[[i]], t[[j]]], {j, n}], 
+    i -> 2.], {i, n}];
+Print["Test for pairwise different distances (should be 0):  ", 
+ Length[Union[Drop[Sort[Flatten[td]], -n]]] - Binomial[n, 2]]
+tdmin = Table[
+   Min[ReplacePart[Table[EuclideanDistance[t[[i]], t[[j]]], {j, n}], 
+     i -> 2.]], {i, n}];
+tposition = 
+  Union[Flatten[Table[Position[td[[i]], tdmin[[i]]], {i, n}]]];
+
+t2 = Table[t[[tposition[[m]]]], {m, Length[tposition]}];
+t1 = Complement[t, t2];
+Print["Visited  ", Length[t2], "  ", t2]
+Print["Not visited  ", Length[t1], "  ", t1]
+Show[ListPlot[t1, PlotStyle -> {Black, PointSize[Large]}], 
+ ListPlot[t2, PlotStyle -> {Green, PointSize[Large]}], 
+ PlotRange -> {{0, 1}, {0, 1}}, AspectRatio -> 1, AxesOrigin -> {0, 0}]
+ ***********************************************************************************
