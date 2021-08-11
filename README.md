@@ -79,4 +79,4 @@ Next neighbours - Partial solution
 ***********************************************************************************
 ***********************************************************************************
 
-A partial to the Next Neighbours Problem will be presented soon.
+A partial solution to the Next Neighbours Problem will be presented soon.
