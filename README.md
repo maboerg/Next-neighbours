@@ -41,7 +41,9 @@ tposition =
   Union[Flatten[Table[Position[td[[i]], tdmin[[i]]], {i, n}]]];
 
 t2 = Table[t[[tposition[[m]]]], {m, Length[tposition]}];
+
 t1 = Complement[t, t2];
+
 Print["Visited  ", Length[t2], "  ", t2]
 Print["Not visited  ", Length[t1], "  ", t1]
 
