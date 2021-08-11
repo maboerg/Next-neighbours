@@ -17,7 +17,7 @@ What about the number m of visited houses? There is an infinite number of possib
 
 Figure 1  -  n=10, m=5
 
-Here is Mathematica code for random arrangement of houses:
+Here is Mathematica code for a random arrangement of houses:
 
 ***********************************************************************************
 (* Neighbours random *)
