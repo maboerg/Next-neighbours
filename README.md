@@ -1,4 +1,3 @@
-![neighbours_figure_01](https://user-images.githubusercontent.com/88709288/129047431-3f63be39-9f12-48c1-9bfa-b7570456d4eb.png)
 # Next-neighbours
 An open problem concerning next neighbours in a planar graph
 
@@ -13,3 +12,5 @@ To make things easier we will think of n houses with pairwise different distance
 For most arrangements of houses there will be some villagers who do not receive visitors.
 
 What about the number m of visited houses? There is an infinite number of possible arrangements of the n houses. So (for n>3) different m will appear in these arrangements. It is easy to establish the maximum for m and not so easy to establish the minimum for m. In fact, the latter is an open problem (as far as the author knows).
+
+![neighbours_figure_01](https://user-images.githubusercontent.com/88709288/129047431-3f63be39-9f12-48c1-9bfa-b7570456d4eb.png)
