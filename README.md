@@ -19,7 +19,6 @@ Figure 1 - n=10, m=5
 
 Here is Mathematica code for a random arrangement of houses:
 
-***********************************************************************************
 ```
 (* Neighbours random *)
 
@@ -52,12 +51,10 @@ Print["Not visited  ", Length[t1], "  ", t1]
 Show[ListPlot[t1, PlotStyle -> {Black, PointSize[Large]}], 
  ListPlot[t2, PlotStyle -> {Green, PointSize[Large]}], 
  PlotRange -> {{0, 1}, {0, 1}}, AspectRatio -> 1, AxesOrigin -> {0, 0}]
- ```
-***********************************************************************************
+ ``` 
  
 Here is the output:
- 
-***********************************************************************************
+
 ```
 Test for pairwise different distances (should be 0):  0
 
@@ -65,7 +62,6 @@ Visited  10  {{0.136873,0.662183},{0.77065,0.908998},{0.099012,0.644006},{0.0747
 
 Not visited  6  {{0.0452213,0.368721},{0.0981768,0.793929},{0.144233,0.0127273},{0.281567,0.342023},{0.522212,0.630813},{0.850147,0.131827}}
 ```
-***********************************************************************************
  
 Here is the Mathematica plot:
  
