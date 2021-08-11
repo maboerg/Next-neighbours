@@ -1,3 +1,4 @@
+![neighbours_figure_01](https://user-images.githubusercontent.com/88709288/129047431-3f63be39-9f12-48c1-9bfa-b7570456d4eb.png)
 # Next-neighbours
 An open problem concerning next neighbours in a planar graph
 
