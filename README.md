@@ -49,3 +49,5 @@ Show[ListPlot[t1, PlotStyle -> {Black, PointSize[Large]}],
  Here is the Mathematica plot:
  
 ![neighbours_figure_02](https://user-images.githubusercontent.com/88709288/129056422-5dc3d0be-65c3-4498-8d13-d67dffa7c151.png)
+
+Figure 2  -  n=10, m=5
