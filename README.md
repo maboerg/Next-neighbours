@@ -11,4 +11,4 @@ To make things easier we will think of n houses with pairwise different distance
 
 For most arrangements of houses there will be some villagers who do not receive visitors.
 
-What about the number m of visited houses? There is an infinite number of possible arrangements of the n houses. So (for n>3) different m will appear in these arrangements. It is easy to establish the maximum for m and not so easy to establish the minimum for m.
+What about the number m of visited houses? There is an infinite number of possible arrangements of the n houses. So (for n>3) different m will appear in these arrangements. It is easy to establish the maximum for m and not so easy to establish the minimum for m. In fact, the latter is an open problem (as far as the author knows).
