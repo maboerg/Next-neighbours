@@ -1,7 +1,11 @@
 # Next-neighbours
 An open problem concerning next neighbours in a planar graph
 
+***********************************************************************************
+***********************************************************************************
 Next neighbours - introduction
+***********************************************************************************
+***********************************************************************************
 
 "Next neighbours" is a project related to graphs and plane geometry. The aim of the project is to discuss an open problem which will be named "Next Neighbour Problem".
 
@@ -68,3 +72,11 @@ Not visited  6  {{0.0452213,0.368721},{0.0981768,0.793929},{0.144233,0.0127273},
 ![neighbours_figure_02](https://user-images.githubusercontent.com/88709288/129056422-5dc3d0be-65c3-4498-8d13-d67dffa7c151.png)
 
 Figure 2  -  n=16, m=10
+
+***********************************************************************************
+***********************************************************************************
+Next neighbours - Partial solution
+***********************************************************************************
+***********************************************************************************
+
+A partial to the Next Neighbours Problem will be presented soon.
