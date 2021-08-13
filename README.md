@@ -76,4 +76,4 @@ Let `G` be a simple digraph; the vertices of `G` are `n` arbitrary placed points
 
 Only `n>1` makes sense. We call a point *visited* if it is a head end in `G`, else *unvisited*. Every point is a *visitor* as it *visits* one head end. We call `(n,m)` a **_working pair_** if we can present an arrangement of `n` points with `m` points unvisited. We get a first result for working pairs:
 
-**(1)&nbsp;&nbsp;&nbsp;`m&ge;2`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n` odd&nbsp;&nbsp;&Rarr;&nbsp;&nbsp;`m&ne;n`
+**(1)&nbsp;&nbsp;&nbsp;`m>1`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n` odd&nbsp;&nbsp;&rArr;&nbsp;&nbsp;`m&neq;n`
