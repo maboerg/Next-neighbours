@@ -144,15 +144,15 @@ Here is the Mathematica plot:
 
 ![neighbours_figure_04](https://user-images.githubusercontent.com/88709288/129362232-333a6107-5814-4e8c-bf13-a54b4f4af610.png)
 
-Figure 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=9, m=2
+Figure 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=9, m=2`
 
 #### Anchor pair `(12,3)`
 
 No graph `G` has as yet been found with `(n,3), n>12` as working pair. But `(12,3)` is a working pair. The main idea is the graph in figure 4 where all distances marked by a line are equal.
 
-![neighbours_figure_04](https://user-images.githubusercontent.com/88709288/129366461-30f61ff5-c68a-4144-874b-878af26a9501.png)
+![neighbours_figure_05](https://user-images.githubusercontent.com/88709288/129366475-7ebb237e-a40a-4b9c-b7bf-94ef692de115.png)
 
-Figure 4
+Figure 5
 
 If we move the points in figure 4 a little bit we can yield pairwise different distances and leave the two green points as the only visited points. To prove this we present a Mathematica program (which is a slight modification of the program in the introduction):
 
@@ -199,7 +199,7 @@ Not visited  {{0.0346154, 0.515385}, {0.035, 0.253846}, {0.265385, 0.153846}, {0
  
 Here is the Mathematica plot:
 
-![neighbours_figure_05](https://user-images.githubusercontent.com/88709288/129366475-7ebb237e-a40a-4b9c-b7bf-94ef692de115.png)
+![neighbours_figure_06](https://user-images.githubusercontent.com/88709288/129367183-2311882a-bb78-45da-b7c8-534c4e0e58d2.png)
 
-Figure 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=12, m=3
+Figure 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=12, m=3`
 
