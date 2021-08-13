@@ -1,7 +1,7 @@
 # Next-neighbours
 An open problem concerning next neighbours in a planar graph
 
-## Next neighbours - Introduction
+## Introduction
 
 "Next neighbours" is a project related to graphs and plane geometry. The aim of the project is to discuss an open problem which will be named "Next Neighbour Problem".
 
@@ -70,6 +70,10 @@ Here is the Mathematica plot:
 Figure 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=16, m=10
 
 
-## Next neighbours - Partial solution
+## Mathematical description of the problem and some proofs
 
-A partial solution to the Next Neighbours Problem will be presented soon.
+Let `G` be a simple digraph; the vertices of `G` are `n` arbitrary placed points in `R^2` with pairwise different distances; the edges of `G` are arrows joining each point (tail end) to its nearest neighbour (head end).
+
+Only `n>1` makes sense. We call a point *visited* if it is a head end in `G`, else *unvisited*. Every point is a *visitor* as it *visits* one head end. We call `(n,m)` a **_working pair_** if we can present an arrangement of `n` points with `m` points unvisited. We get a first result for working pairs:
+
+**(1)&nbsp;&nbsp;&nbsp;`m&ge;2`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n` odd&nbsp;&nbsp;&Rarr;&nbsp;&nbsp;`m&ne;n`
