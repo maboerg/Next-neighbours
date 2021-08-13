@@ -203,3 +203,4 @@ Here is the Mathematica plot:
 
 Figure 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=12, m=3`
 
+... will be completed soon
