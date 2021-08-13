@@ -90,3 +90,9 @@ For any `m` we want to find the maximum `n` for which we can establish `(n,m)` a
 #### Anchor pair `(9,2)`
 
 No graph `G` has as yet been found with `(n,2), n>9` as working pair. But `(9,2)` is a working pair. The main idea is the graph in figure 3 where all distances marked by a line are equal.
+
+![neighbours_figure_03](https://user-images.githubusercontent.com/88709288/129348759-ecd18f04-6eea-4138-991c-22da53d249d8.png)
+
+Figure 3
+
+If we move the points in figure 3 a little bit we can yield pairwise different distances and leave the two green points as the only visited points.
