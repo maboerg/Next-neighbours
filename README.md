@@ -142,7 +142,7 @@ Not visited  {{0.045,0.67},{0.0455,0.33},{0.35,0.2},\
 ```
  
 Here is the Mathematica plot:
- 
 
+![neighbours_figure_04](https://user-images.githubusercontent.com/88709288/129362232-333a6107-5814-4e8c-bf13-a54b4f4af610.png)
 
 Figure 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=9, m=2
