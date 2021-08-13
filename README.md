@@ -85,4 +85,8 @@ This can easily been proved. `m=0` and `m=1` are discarded because the two point
 #### Anchor pairs `(n,m)`
 
 For any `m` we want to find the maximum `n` for which we can establish `(n,m)` as a working pair. This pair will be called an *anchor pair*. 
-Example: It is obvious that `(4,2)` is a working pair but not an anchor pair because `(5,2)` is a working pair. We shall see that `(5,2)` is not an anchor pair either.
+&nbsp;&nbsp;&nbsp;Example: It is obvious that `(4,2)` is a working pair but not an anchor pair because `(5,2)` is a working pair. We shall see that `(5,2)` is not an anchor pair either.
+
+#### Anchor pair `(9,2)`
+
+No graph `G` has as yet been found with `(n,2), n>9` as working pair. But `(9,2)` is a working pair. The main idea is the graph in figure 3 where all distances marked by a line are equal.
