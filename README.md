@@ -99,7 +99,7 @@ No graph `G` has as yet been found with `(n,2), n>9` as working pair. But `(9,2)
 
 Figure 3
 
-If we move the points in figure 3 a little bit we can yield pairwise different distances and leave the two green points as the only visited points. To prove this we present a Mathematica program:
+If we move the points in figure 3 a little bit we can yield pairwise different distances and leave the two green points as the only visited points. To prove this we present a Mathematica program (which is a slight modification of the program in the introduction):
 
 ```
 (* Neighbours (9,2) *)
@@ -135,9 +135,9 @@ Here is the output:
 ```
 Test for pairwise different distances (should be 0):  0
 
-Visited  {{0.3,0.5}, {0.6,0.5}}
+Visited  {{0.3, 0.5}, {0.6, 0.5}}
 
-Not visited  {{0.045,0.67}, {0.0455,0.33}, {0.35,0.2}, {0.355,0.8}, {0.7,0.195}, {0.7,0.8}, {0.955,0.5}}
+Not visited  {{0.045, 0.67}, {0.0455, 0.33}, {0.35, 0.2}, {0.355, 0.8}, {0.7, 0.195}, {0.7, 0.8}, {0.955, 0.5}}
 ```
  
 Here is the Mathematica plot:
@@ -145,3 +145,61 @@ Here is the Mathematica plot:
 ![neighbours_figure_04](https://user-images.githubusercontent.com/88709288/129362232-333a6107-5814-4e8c-bf13-a54b4f4af610.png)
 
 Figure 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=9, m=2
+
+#### Anchor pair `(12,3)`
+
+No graph `G` has as yet been found with `(n,3), n>12` as working pair. But `(12,3)` is a working pair. The main idea is the graph in figure 4 where all distances marked by a line are equal.
+
+![neighbours_figure_04](https://user-images.githubusercontent.com/88709288/129366461-30f61ff5-c68a-4144-874b-878af26a9501.png)
+
+Figure 4
+
+If we move the points in figure 4 a little bit we can yield pairwise different distances and leave the two green points as the only visited points. To prove this we present a Mathematica program (which is a slight modification of the program in the introduction):
+
+```
+(* Neighbours (12,3) *)
+(* file: next-neighbour_03.nb *)
+
+t = {{.3, .5}, {.6, .5}, {.895, .5}, {1.25, .5}, {.35, .8}, {.345, .2}, {.045, .67},\
+{.0455, .33}, {1.05, .8}, {1.05, .199}, {.7, .78}, {.7, .221}}/1.3;
+
+n = Length[t];
+
+td = Table[
+   ReplacePart[Table[EuclideanDistance[t[[i]], t[[j]]], {j, n}], 
+    i -> 2.], {i, n}];
+Print["Test for pairwise different distances (should be 0):  ", 
+ Length[Union[Drop[Sort[Flatten[td]], -n]]] - Binomial[n, 2]]
+tdmin = Table[
+   Min[ReplacePart[Table[EuclideanDistance[t[[i]], t[[j]]], {j, n}], 
+     i -> 2.]], {i, n}];
+tposition = 
+  Union[Flatten[Table[Position[td[[i]], tdmin[[i]]], {i, n}]]];
+
+t2 = Table[t[[tposition[[m]]]], {m, Length[tposition]}];
+t1 = Complement[t, t2];
+Print["Visited  ", t2]
+Print["Not visited  ", t1]
+Show[ListPlot[t1, PlotStyle -> {Black, PointSize[Large]}], 
+ ListPlot[t2, PlotStyle -> {Green, PointSize[Large]}], 
+ PlotRange -> {{0, 1}, {0, 1}}, AspectRatio -> 1, 
+ AxesOrigin -> {0, 0}]
+ ```
+
+Here is the output:
+
+```
+Test for pairwise different distances (should be 0):  0
+
+Visited  {{0.230769, 0.384615}, {0.461538, 0.384615}, {0.688462, 0.384615}}
+
+Not visited  {{0.0346154, 0.515385}, {0.035, 0.253846}, {0.265385, 0.153846}, {0.269231, 0.615385},\ 
+{0.538462, 0.17}, {0.538462, 0.6}, {0.807692, 0.153077}, {0.807692, 0.615385}, {0.961538, 0.384615}}
+```
+ 
+Here is the Mathematica plot:
+
+![neighbours_figure_05](https://user-images.githubusercontent.com/88709288/129366475-7ebb237e-a40a-4b9c-b7bf-94ef692de115.png)
+
+Figure 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=12, m=3
+
