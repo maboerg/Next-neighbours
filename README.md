@@ -21,6 +21,7 @@ Here is Mathematica code for a random arrangement of houses:
 
 ```
 (* Neighbours random *)
+(* file: next-neighbour_01.nb *)
 
 t = Table[{Random[], Random[]}, {i, 16}];
 
@@ -58,9 +59,11 @@ Here is the output:
 ```
 Test for pairwise different distances (should be 0):  0
 
-Visited  10  {{0.136873,0.662183},{0.77065,0.908998},{0.099012,0.644006},{0.0747849,0.711588},{0.417849,0.475834},{0.466013,0.146717},{0.494827,0.421237},{0.418441,0.00420624},{0.914883,0.921726},{0.18339,0.548094}}
+Visited  10  {{0.136873,0.662183},{0.77065,0.908998},{0.099012,0.644006},{0.0747849,0.711588},\
+{0.417849,0.475834},{0.466013,0.146717},{0.494827,0.421237},{0.418441,0.00420624},{0.914883,0.921726},{0.18339,0.548094}}
 
-Not visited  6  {{0.0452213,0.368721},{0.0981768,0.793929},{0.144233,0.0127273},{0.281567,0.342023},{0.522212,0.630813},{0.850147,0.131827}}
+Not visited  6  {{0.0452213,0.368721},{0.0981768,0.793929},{0.144233,0.0127273},\
+{0.281567,0.342023},{0.522212,0.630813},{0.850147,0.131827}}
 ```
  
 Here is the Mathematica plot:
@@ -95,4 +98,51 @@ No graph `G` has as yet been found with `(n,2), n>9` as working pair. But `(9,2)
 
 Figure 3
 
-If we move the points in figure 3 a little bit we can yield pairwise different distances and leave the two green points as the only visited points.
+If we move the points in figure 3 a little bit we can yield pairwise different distances and leave the two green points as the only visited points. To prove this we present a Mathematica program:
+
+```
+(* Neighbours (9,2) *)
+(* file: next-neighbour_02.nb *)
+
+t = {{.3, .5}, {.6, .5}, {.955, .5}, {.355, .8}, {.35, .2}, {.045, \
+.67}, {.0455, .33}, {.7, .8}, {.7, .195}};
+
+n = Length[t];
+
+td = Table[
+   ReplacePart[Table[EuclideanDistance[t[[i]], t[[j]]], {j, n}], 
+    i -> 2.], {i, n}];
+Print["Test for pairwise different distances (should be 0):  ", 
+ Length[Union[Drop[Sort[Flatten[td]], -n]]] - Binomial[n, 2]]
+tdmin = Table[
+   Min[ReplacePart[Table[EuclideanDistance[t[[i]], t[[j]]], {j, n}], 
+     i -> 2.]], {i, n}];
+tposition = 
+  Union[Flatten[Table[Position[td[[i]], tdmin[[i]]], {i, n}]]];
+
+t2 = Table[t[[tposition[[m]]]], {m, Length[tposition]}];
+t1 = Complement[t, t2];
+Print["Visited  ", t2]
+Print["Not visited  ", t1]
+Show[ListPlot[t1, PlotStyle -> {Black, PointSize[Large]}], 
+ ListPlot[t2, PlotStyle -> {Green, PointSize[Large]}], 
+ PlotRange -> {{0, 1}, {0, 1}}, AspectRatio -> 1, 
+ AxesOrigin -> {0, 0}]
+ ```
+
+Here is the output:
+
+```
+Test for pairwise different distances (should be 0):  0
+
+Visited  {{0.3,0.5},{0.6,0.5}}
+
+Not visited  {{0.045,0.67},{0.0455,0.33},{0.35,0.2},\ 
+{0.355,0.8},{0.7,0.195},{0.7,0.8},{0.955,0.5}}
+```
+ 
+Here is the Mathematica plot:
+ 
+
+
+Figure 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=9, m=2
