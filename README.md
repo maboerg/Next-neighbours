@@ -76,4 +76,8 @@ Let `G` be a simple digraph; the vertices of `G` are `n` arbitrary placed points
 
 Only `n>1` makes sense. We call a point *visited* if it is a head end in `G`, else *unvisited*. Every point is a *visitor* as it *visits* one head end. We call `(n,m)` a **_working pair_** if we can present an arrangement of `n` points with `m` points unvisited. We get a first result for working pairs:
 
-**(1)&nbsp;&nbsp;&nbsp;`m>1`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n` odd&nbsp;&nbsp;&rArr;&nbsp;&nbsp;`m&neq;n`
+**(1)&nbsp;&nbsp;&nbsp;`m>1`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n` odd&nbsp;&nbsp;&rArr;&nbsp;&nbsp;`m<n`**
+
+This can easily been proved. `m=0` and `m=1` are discarded because the two points with minimal distance visit each other.  —  What about `m=n`?  This is obviously possible for even `n` as the vertices of `G` could be an arrangement of `n/2` pairs of close-by points.  —  For `n` odd we give an inductive proof. For `n=3` one point will not be visited. For bigger `n` the two points `A` and `B` with the minimal distance visit each other; the other`n-2` points fall in one of the following two cases: 
+&nbsp;&nbsp;&nbsp;*First case*: At least one of the remaining `n-2` points visits `A` or `B`; then there are at most `n-3` possible visitors left for `n-2` points; thus one point at least has no visitor. 
+&nbsp;&nbsp;&nbsp;*Second case*: The remaining `n-2` points do not visit `A` or `B`; then there are `n-2` visitors for `n-2` houses which settles the claim by induction: At least one house gets no visit.
