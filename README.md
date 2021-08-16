@@ -203,10 +203,20 @@ Here is the Mathematica plot:
 
 Figure 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=12, m=3`
 
-#### Anchor pairs fpor bigger `m`
+#### Anchor pairs for bigger `m`
 
 We will suppose that for `m=2` resp. `m=3` the maximum `n=9` resp. `n=12` have been established. One could be tempted to proceed to `m=4,5...` in a similar manner. Take `m=4` as an example. “Similar manner” means putting `4` points in the center which visit each other and putting around these `4` points as many points as possible which are not visited. But this seems to be suboptimal because one can also replicate and combine the arrangements in figures 4 and 6: As we want to establish a big as possible `n` for each `m` it seems to be a good idea to build several "islands" of type `(9,2)` if `m` is even. For odd `m` one adds a single "island" of type `(12,3)`. Figure 7 shows the islands for the anchor pair `(n,m)=(57,13)`:
 
 ![neighbours_figure_07](https://user-images.githubusercontent.com/88709288/129550589-0f5c5a75-8de1-4bd7-ab0f-222bda3f15b5.png)
 
 Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=57, m=13`
+
+**(2)**&nbsp;&nbsp;&nbsp;This yields the **anchor pairs `(9m/2,m)` for even `m`** and **`((9m-3)/2,m)` for odd `m`**.
+
+#### All pairs `(n,m)` proven to be working pairs
+
+**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2) **&rArr; `(n',m)`** is a **working pair** for `m<=n'<=n` (`n` even)** and **`m+1<=n'<=n` (`n` odd)**.
+
+**Proof**
+
+Look at figure 4. One can remove any number of the unvisited points (black dots) hereby making `n` smaller while leaving `m` unchanged.
