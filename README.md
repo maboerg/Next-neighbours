@@ -203,4 +203,10 @@ Here is the Mathematica plot:
 
 Figure 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=12, m=3`
 
-... will be completed soon
+#### Anchor pairs fpor bigger `m`
+
+We will suppose that for `m=2` resp. `m=3` the maximum `n=9` resp. `n=12` have been established. One could be tempted to proceed to `m=4,5...` in a similar manner. Take `m=4` as an example. “Similar manner” means putting `4` points in the center which visit each other and putting around these `4` points as many points as possible which are not visited. But this seems to be suboptimal because one can also replicate and combine the arrangements in figures 4 and 6: As we want to establish a big as possible `n` for each `m` it seems to be a good idea to build several "islands" of type `(9,2)` if `m` is even. For odd `m` one adds a single "island" of type `(12,3)`. Figure 7 shows the islands for the anchor pair `(n,m)=(57,13)`:
+
+![neighbours_figure_07](https://user-images.githubusercontent.com/88709288/129550589-0f5c5a75-8de1-4bd7-ab0f-222bda3f15b5.png)
+
+Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=57, m=13`
