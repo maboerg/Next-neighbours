@@ -212,11 +212,11 @@ We will suppose that for `m=2` resp. `m=3` the maximum `n=9` resp. `n=12` have b
 Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=57, m=13`\
 &nbsp;\
 &nbsp;\
-**(2)**&nbsp;&nbsp;&nbsp;This yields the **anchor pairs `(9m/2,m)` for even `m`** and **`((9m-3)/2,m)` for odd `m`**.\
+**(2)**&nbsp;&nbsp;&nbsp;This yields the **anchor pairs `(9m/2,m)` for `m even`** and **`((9m-3)/2,m)` for `m odd`**.\
 &nbsp;
 #### All pairs `(n,m)` proven to be working pairs
 
-**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n',m)`** is a **working pair for `n'= m ... n` (`n` even)** and **`n'= m+1 ... n` (`n` odd)**.
+**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n',m)`** is a **working pair for `n'= m ... n` (`n even`)** and **`n'= m+1 ... n` (`n odd`)**.
 
 **Proof**
 
@@ -238,11 +238,11 @@ Figure 8\
 
 Regarding figure 8, the following proposition (4) seems obvious but will be proven. In (3) we “filled” the columns of the matrix in figure 8, in (4) we “fill” the rows.
 
-**(4)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is a **working pair** as in figure 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n,m')`** is a **working pair for `m'= m ... n` (`m` even)** and **`m'= m ... n-1` (`m` odd)**.
+**(4)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is a **working pair** as in figure 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n,m')`** is a **working pair for `m'= m ... n` (`m even`)** and **`m'= m ... n-1` (`m odd`)**.
 
 **Proof**
 
-We take a pair `(n,m')` with `m'<n` for `m` even and `m'<n-1` for `m` odd. It suffices to show that `(n,m'+1)` is a working pair (by induction, beginning with `m'=m`). The corresponding anchor pair to `(n,m')` is `(n0,m')` and the corresponding anchor pair to `(n,m'+1)` is `(n1,m'+1)`. (3) states that `(n,m'+1)` is a working pair because `n<=n0<n1` (see (3) for the first inequality and (2) for the second one). QED.
+We take a pair `(n,m')` with `m'<n` for `m even` and `m'<n-1` for `m odd`. It suffices to show that `(n,m'+1)` is a working pair (by induction, beginning with `m'=m`). The corresponding anchor pair to `(n,m')` is `(n0,m')` and the corresponding anchor pair to `(n,m'+1)` is `(n1,m'+1)`. (3) states that `(n,m'+1)` is a working pair because `n<=n0<n1` (see (3) for the first inequality and (2) for the second one). QED.
 
 ## Results
 
@@ -251,8 +251,39 @@ We can now define four sequences to describe our results.
 The sequences `a` and `b` deal with the question “`n` points given, how many must at least be visited?”\
 The sequences `c` and `d` deal with the question “`m` points visited, how many points can at most exist?”
 
+In the sections above we got results for `c`. The formulae given below for `a` are directly derived from (2).
+
 **`d(m)  = max n`, maximum taken over working pairs `(n,m)`**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`d(m)=` maximal number of vertices, Maximum taken over all possible `G` with m vertices with `indegree > 0`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`d(m)=` maximal number of vertices, maximum taken over all possible `G` with `m` vertices with `indegree > 0`
 
 **`c(m) = max n`, maximum taken over _proven_ working pairs `(n,m)`**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(c(m),m)` are the anchor pairs defined in (2).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(c(m),m)` are the anchor pairs defined in (2), cf. figure 8.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`c(m) = 9m/2, m even`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`c(m) = (9m-3)/2, m odd`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`c` is strictly increasing.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`c=(9,12,18,21,27,30,...)`, beginning at `m=2`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The sequence `c` is the “inverse” of `d`.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`c(m)` is the (best presently known) lower bound for `d(m)`.
+
+**`b(n)  = min m`, minimum taken over working pairs `(n,m)`**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`b(m)=` minimal number of vertices with `indegree > 0`, minimum taken over all possible `G` with `n` vertices
+
+**`a(n) = min m`, minimum taken over _proven_ working pairs `(n,m)`**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(2) = a(3) = 2`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(n) = 2j for n = 9j-5 ... 9j, j = 1,2,3...`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(n) = 2j+1 for n = 9j+1 ... 9j+3, j = 1,2,3...`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a` is (not strictly) increasing.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a=(2,2,2,2,2,2,2,2,2,3,3,3,4,4,4,4,4,4,5,5,5,6,6,6,6,6,6,7,7,7,8,...)`, beginning at `n=2`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The sequence `a` is the “inverse” of `c`.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(n)` is the (best presently known) upper bound for `b(n)`.
+
+#### The open problem
+
+Is `a(n)=b(n)` and `c(m)=d(m)`?
+
+Under the following assumptions the answer would be “yes”:
+
+`c(2)=9`\
+`c(3)=12`\
+For `m>3` the arrangements as in figure 7 are optimal.
+
+So the challenge is this: Can one do better than in figures 4, 6, 7? Or can it be proved that the arrangements in these figures are optimal?
