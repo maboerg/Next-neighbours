@@ -211,7 +211,9 @@ We will suppose that for `m=2` resp. `m=3` the maximum `n=9` resp. `n=12` have b
 
 Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=57, m=13`
 
+
 **(2)**&nbsp;&nbsp;&nbsp;This yields the **anchor pairs `(9m/2,m)` for even `m`** and **`((9m-3)/2,m)` for odd `m`**.
+
 
 #### All pairs `(n,m)` proven to be working pairs
 
@@ -220,3 +222,7 @@ Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=57, m=13`
 **Proof**
 
 Look at figure 4. One can remove any number of the unvisited points (black dots) hereby making `n` smaller while leaving `m` unchanged.
+
+Now look at figure 6. One can remove any number of the unvisited points (black dots) hereby making `n` smaller. When all unvisited points are removed one of the visited points has become an unvisited point (in figure 6, this will be the left one); this reflects the second part of (1).
+
+So (3) is proven for `(n,m)=(9,2)` and `(n,m)=(12,3)`. But the bigger anchor pairs are built from these “starting” anchor points. This completes the proof. - In figure 7 one can remove all black dots, one after the other, of the five left “islands”; then one can remove all black dots, one after the other, of the right “island”, thus changing one green dot to black.
