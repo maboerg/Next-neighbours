@@ -282,8 +282,8 @@ Is `a(n)=b(n)` and `c(m)=d(m)`? If "yes" the _Next Neighbour Problem_ would be s
 
 Under the following assumptions the answer is “yes”:
 
-`c(2)=9`\
-`c(3)=12`\
+`d(2)=9`\
+`d(3)=12`\
 For `m>3` the arrangements as in figure 7 are optimal.
 
 So the challenge is this: Can one do better than in figures 4, 6, 7? Or can it be proved that the arrangements in these figures are optimal?
