@@ -209,15 +209,14 @@ We will suppose that for `m=2` resp. `m=3` the maximum `n=9` resp. `n=12` have b
 
 ![neighbours_figure_07](https://user-images.githubusercontent.com/88709288/129550589-0f5c5a75-8de1-4bd7-ab0f-222bda3f15b5.png)
 
-Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=57, m=13`
-
-
-**(2)**&nbsp;&nbsp;&nbsp;This yields the **anchor pairs `(9m/2,m)` for even `m`** and **`((9m-3)/2,m)` for odd `m`**.
-
-
+Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=57, m=13`\
+&nbsp;\
+&nbsp;\
+**(2)**&nbsp;&nbsp;&nbsp;This yields the **anchor pairs `(9m/2,m)` for even `m`** and **`((9m-3)/2,m)` for odd `m`**.\
+&nbsp;
 #### All pairs `(n,m)` proven to be working pairs
 
-**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2) **&rArr; `(n',m)`** is a **working pair** for `m<=n'<=n` (`n` even)** and **`m+1<=n'<=n` (`n` odd)**.
+**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n',m)`** is a **working pair for `m<=n'<=n` (`n` even)** and **`m+1<=n'<=n` (`n` odd)**.
 
 **Proof**
 
@@ -225,4 +224,22 @@ Look at figure 4. One can remove any number of the unvisited points (black dots)
 
 Now look at figure 6. One can remove any number of the unvisited points (black dots) hereby making `n` smaller. When all unvisited points are removed one of the visited points has become an unvisited point (in figure 6, this will be the left one); this reflects the second part of (1).
 
-So (3) is proven for `(n,m)=(9,2)` and `(n,m)=(12,3)`. But the bigger anchor pairs are built from these “starting” anchor points. This completes the proof. - In figure 7 one can remove all black dots, one after the other, of the five left “islands”; then one can remove all black dots, one after the other, of the right “island”, thus changing one green dot to black.
+So (3) is proven for `(n,m)=(9,2)` and `(n,m)=(12,3)`. But the bigger anchor pairs are built from these “starting” anchor points. This completes the proof. - In figure 7 one can remove all black dots, one after the other, of the five left “islands”; then one can remove all black dots, one after the other, of the right “island”, thus changing one green dot to black. QED.
+
+(3) is shown graphically in figure 8:
+
+![neighbours_figure_08](https://user-images.githubusercontent.com/88709288/129554116-80b2775d-9259-484a-9915-70bc1d029d36.png)
+
+Figure 8\
+&nbsp;&nbsp;&nbsp;&nbsp;x: working pair\
+&nbsp;&nbsp;&nbsp;&nbsp;green: anchor pair\
+&nbsp;&nbsp;&nbsp;&nbsp;orange: no working pair (proven)\
+&nbsp;&nbsp;&nbsp;&nbsp;white: no working pair (unproven conjecture) 
+
+Regarding figure 8, the following proposition (4) seems obvious but will be proven. In (3) we “filled” the columns of the matrix in figure 8, in (4) we “fill” the rows.
+
+**(4)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is a **working pair** as in figure 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n,m')`** is a **working pair for `m<=m'<=n` (`m` even)** and **`m<=m'<=n-1` (`m` odd)**.
+
+**Proof**
+
+We take a pair `(n,m')` with `m'<n` for `m` even and `m'<n-1` for `m` odd. It suffices to show that `(n,m'+1)` is a working pair (by induction, beginning with `m'=m`). The corresponding anchor pair to `(n,m')` is `(n0,m')` and the corresponding anchor pair to `(n,m'+1)` is `(n1,m'+1)`. (3) states that `(n,m'+1)` is a working pair because `n<=n0<n1` (see (3) for the first inequality and (2) for the second one). QED.
