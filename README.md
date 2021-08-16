@@ -154,7 +154,7 @@ No graph `G` has as yet been found with `(n,3), n>12` as working pair. But `(12,
 
 Figure 5
 
-If we move the points in figure 4 a little bit we can yield pairwise different distances and leave the two green points as the only visited points. To prove this we present a Mathematica program (which is a slight modification of the program in the introduction):
+If we move the points in figure 4 a little bit we can yield pairwise different distances and leave the three green points as the only visited points. To prove this we present a Mathematica program (which is a slight modification of the program in the introduction):
 
 ```
 (* Neighbours (12,3) *)
