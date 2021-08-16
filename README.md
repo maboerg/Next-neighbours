@@ -216,7 +216,7 @@ Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=57, m=13`\
 &nbsp;
 #### All pairs `(n,m)` proven to be working pairs
 
-**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n',m)`** is a **working pair for `m<=n'<=n` (`n` even)** and **`m+1<=n'<=n` (`n` odd)**.
+**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n',m)`** is a **working pair for `n'= m ... n` (`n` even)** and **`n'= m+1 ... n` (`n` odd)**.
 
 **Proof**
 
@@ -238,8 +238,15 @@ Figure 8\
 
 Regarding figure 8, the following proposition (4) seems obvious but will be proven. In (3) we “filled” the columns of the matrix in figure 8, in (4) we “fill” the rows.
 
-**(4)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is a **working pair** as in figure 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n,m')`** is a **working pair for `m<=m'<=n` (`m` even)** and **`m<=m'<=n-1` (`m` odd)**.
+**(4)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is a **working pair** as in figure 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n,m')`** is a **working pair for `m'= m ... n` (`m` even)** and **`m'= m ... n-1` (`m` odd)**.
 
 **Proof**
 
 We take a pair `(n,m')` with `m'<n` for `m` even and `m'<n-1` for `m` odd. It suffices to show that `(n,m'+1)` is a working pair (by induction, beginning with `m'=m`). The corresponding anchor pair to `(n,m')` is `(n0,m')` and the corresponding anchor pair to `(n,m'+1)` is `(n1,m'+1)`. (3) states that `(n,m'+1)` is a working pair because `n<=n0<n1` (see (3) for the first inequality and (2) for the second one). QED.
+
+## Results
+
+We can now define four sequences to describe our results.
+
+The sequences `a` and `b` deal with the question “`n` points given, how many must at least be visited?”
+The sequences `c` and `d` deal with the question “`m` points visited, how many points can at most exist?”
