@@ -216,7 +216,7 @@ Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=57, m=13`\
 &nbsp;
 #### All pairs `(n,m)` proven to be working pairs
 
-**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n',m)`** is a **working pair for `n'= m ... n` (`n even`)** and **`n'= m+1 ... n` (`n odd`)**.
+**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n',m)`** is a **working pair for `n'= m ... n, n even`)** and **`n'= m+1 ... n, n odd`)**.
 
 **Proof**
 
@@ -238,7 +238,7 @@ Figure 8\
 
 Regarding figure 8, the following proposition (4) seems obvious but will be proven. In (3) we “filled” the columns of the matrix in figure 8, in (4) we “fill” the rows.
 
-**(4)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is a **working pair** as in figure 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n,m')`** is a **working pair for `m'= m ... n` (`m even`)** and **`m'= m ... n-1` (`m odd`)**.
+**(4)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is a **working pair** as in figure 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n,m')`** is a **working pair for `m'= m ... n, m even`)** and **`m'= m ... n-1, m odd`)**.
 
 **Proof**
 
@@ -278,9 +278,9 @@ In the sections above we got results for `c`. The formulae given below for `a` a
 
 #### The open problem
 
-Is `a(n)=b(n)` and `c(m)=d(m)`?
+Is `a(n)=b(n)` and `c(m)=d(m)`? If "yes" the _Next Neighbour Problem_ would be solved.
 
-Under the following assumptions the answer would be “yes”:
+Under the following assumptions the answer is “yes”:
 
 `c(2)=9`\
 `c(3)=12`\
