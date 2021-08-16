@@ -248,5 +248,11 @@ We take a pair `(n,m')` with `m'<n` for `m` even and `m'<n-1` for `m` odd. It su
 
 We can now define four sequences to describe our results.
 
-The sequences `a` and `b` deal with the question “`n` points given, how many must at least be visited?”
+The sequences `a` and `b` deal with the question “`n` points given, how many must at least be visited?”\
 The sequences `c` and `d` deal with the question “`m` points visited, how many points can at most exist?”
+
+**`d(m)  =max n`, Maximum taken over working pairs `(n,m)`**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`d(m)=` maximal number of vertices, Maximum taken over all possible `G` with m vertices with `indegree > 0`
+
+**`c(m)  max n`, Maximum taken over _proven_ working pairs `(n,m)`**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(c(m),m)` are the anchor pairs defined in (2).
