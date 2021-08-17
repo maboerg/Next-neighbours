@@ -15,7 +15,7 @@ What about the number `m` of visited houses? There is an infinite number of poss
 
 ![neighbours_figure_01](https://user-images.githubusercontent.com/88709288/129047431-3f63be39-9f12-48c1-9bfa-b7570456d4eb.png)
 
-Figure 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=10, m=5
+Figure 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n = 10, m = 5`
 
 Here is Mathematica code for a random arrangement of houses:
 
@@ -71,7 +71,7 @@ Here is the Mathematica plot:
  
 ![neighbours_figure_02](https://user-images.githubusercontent.com/88709288/129056422-5dc3d0be-65c3-4498-8d13-d67dffa7c151.png)
 
-Figure 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=16, m=10
+Figure 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n = 16, m = 10`
 
 
 ## Mathematical description of the problem and some proofs
@@ -80,9 +80,9 @@ Let `G` be a simple digraph; the vertices of `G` are `n` arbitrary placed points
 
 Only `n>1` makes sense. We call a point *visited* if it is a head end in `G`, else *unvisited*. Every point is a *visitor* as it *visits* one head end. We call `(n,m)` a **_working pair_** if we can present an arrangement of `n` points with `m` points unvisited. We get a first result for working pairs:
 
-**(1)&nbsp;&nbsp;&nbsp;`m>1`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** and **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n` odd&nbsp;&nbsp;&rArr;&nbsp;&nbsp;`m<n`**
+**(1)&nbsp;&nbsp;&nbsp;`m > 1`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** and **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n odd`&nbsp;&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;`m < n`**
 
-This can easily been proved. `m=0` and `m=1` are discarded because the two points with minimal distance visit each other.  —  What about `m=n`?  This is obviously possible for even `n` as the vertices of `G` could be an arrangement of `n/2` pairs of close-by points.  —  For `n` odd we give an inductive proof. For `n=3` one point will not be visited. For bigger `n` the two points `A` and `B` with the minimal distance visit each other; the other`n-2` points fall in one of the following two cases:  
+This can easily been proved. `m=0` and `m=1` are discarded because the two points with minimal distance visit each other.  —  What about `m = n`?  This is obviously possible for even `n` as the vertices of `G` could be an arrangement of `n/2` pairs of close-by points.  —  For `n` odd we give an inductive proof. For `n=3` one point will not be visited. For bigger `n` the two points `A` and `B` with the minimal distance visit each other; the other`n-2` points fall in one of the following two cases:  
 &nbsp;&nbsp;&nbsp;*First case*: At least one of the remaining `n-2` points visits `A` or `B`; then there are at most `n-3` possible visitors left for `n-2` points; thus one point at least has no visitor.  
 &nbsp;&nbsp;&nbsp;*Second case*: The remaining `n-2` points do not visit `A` or `B`; then there are `n-2` visitors for `n-2` houses which settles the claim by induction: At least one house gets no visit.
 
@@ -93,7 +93,7 @@ For any `m` we want to find the maximum `n` for which we can establish `(n,m)` a
 
 #### Anchor pair `(9,2)`
 
-No graph `G` has as yet been found with `(n,2), n>9` as working pair. But `(9,2)` is a working pair. The main idea is the graph in figure 3 where all distances marked by a line are equal.
+No graph `G` has as yet been found with `(n,2), n > 9` as working pair. But `(9,2)` is a working pair. The main idea is the graph in figure 3 where all distances marked by a line are equal.
 
 ![neighbours_figure_03](https://user-images.githubusercontent.com/88709288/129348759-ecd18f04-6eea-4138-991c-22da53d249d8.png)
 
@@ -144,17 +144,17 @@ Here is the Mathematica plot:
 
 ![neighbours_figure_04](https://user-images.githubusercontent.com/88709288/129362232-333a6107-5814-4e8c-bf13-a54b4f4af610.png)
 
-Figure 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=9, m=2`
+Figure 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n = 9, m = 2`
 
 #### Anchor pair `(12,3)`
 
-No graph `G` has as yet been found with `(n,3), n>12` as working pair. But `(12,3)` is a working pair. The main idea is the graph in figure 4 where all distances marked by a line are equal.
+No graph `G` has as yet been found with `(n,3), n > 12` as working pair. But `(12,3)` is a working pair. The main idea is the graph in figure 4 where all distances marked by a line are equal.
 
 ![neighbours_figure_05](https://user-images.githubusercontent.com/88709288/129366475-7ebb237e-a40a-4b9c-b7bf-94ef692de115.png)
 
 Figure 5
 
-If we move the points in figure 4 a little bit we can yield pairwise different distances and leave the three green points as the only visited points. To prove this we present a Mathematica program (which is a slight modification of the program in the introduction):
+If we move the points in figure 5 a little bit we can yield pairwise different distances and leave the three green points as the only visited points. To prove this we present a Mathematica program (which is a slight modification of the program in the introduction):
 
 ```
 (* Neighbours (12,3) *)
@@ -201,22 +201,22 @@ Here is the Mathematica plot:
 
 ![neighbours_figure_06](https://user-images.githubusercontent.com/88709288/129367183-2311882a-bb78-45da-b7c8-534c4e0e58d2.png)
 
-Figure 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=12, m=3`
+Figure 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n = 12, m = 3`
 
 #### Anchor pairs for bigger `m`
 
-We will suppose that for `m=2` resp. `m=3` the maximum `n=9` resp. `n=12` have been established. One could be tempted to proceed to `m=4,5...` in a similar manner. Take `m=4` as an example. “Similar manner” means putting `4` points in the center which visit each other and putting around these `4` points as many points as possible which are not visited. But this seems to be suboptimal because one can also replicate and combine the arrangements in figures 4 and 6: As we want to establish a big as possible `n` for each `m` it seems to be a good idea to build several "islands" of type `(9,2)` if `m` is even. For odd `m` one adds a single "island" of type `(12,3)`. Figure 7 shows the islands for the anchor pair `(n,m)=(57,13)`:
+We will suppose that for `m=2` resp. `m=3` the maximum `n=9` resp. `n=12` have been established. One could be tempted to proceed to `m = 4, 5 ...` in a similar manner. Take `m=4` as an example. “Similar manner” means putting `4` points in the center which are visited and putting around these `4` points as many points as possible which are not visited. But this seems to be suboptimal because one can also replicate and combine the arrangements in figures 4 and 6: As we want to establish a big as possible `n` for each `m` it seems to be a good idea to build several "islands" of type `(9,2)` if `m` is even. For odd `m` one adds a single "island" of type `(12,3)`. Figure 7 shows the islands for the anchor pair `(n,m) = (57,13)`:
 
 ![neighbours_figure_07](https://user-images.githubusercontent.com/88709288/129550589-0f5c5a75-8de1-4bd7-ab0f-222bda3f15b5.png)
 
-Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n=57, m=13`\
+Figure 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n = 57, m = 13`\
 &nbsp;\
 &nbsp;\
 **(2)**&nbsp;&nbsp;&nbsp;This yields the **anchor pairs `(9m/2,m)` for `m even`** and **`((9m-3)/2,m)` for `m odd`**.\
 &nbsp;
 #### All pairs `(n,m)` proven to be working pairs
 
-**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n',m)`** is a **working pair for `n'= m ... n, n even`)** and **`n'= m+1 ... n, n odd`)**.
+**(3)**&nbsp;&nbsp;&nbsp;**`(n,m)`** is an **anchor pair** as in (2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`(n',m)`** is a **working pair for `n' = m ... n, n even`** and **`n' = m+1 ... n, n odd`**.
 
 **Proof**
 
@@ -224,7 +224,7 @@ Look at figure 4. One can remove any number of the unvisited points (black dots)
 
 Now look at figure 6. One can remove any number of the unvisited points (black dots) hereby making `n` smaller. When all unvisited points are removed one of the visited points has become an unvisited point (in figure 6, this will be the left one); this reflects the second part of (1).
 
-So (3) is proven for `(n,m)=(9,2)` and `(n,m)=(12,3)`. But the bigger anchor pairs are built from these “starting” anchor points. This completes the proof. - In figure 7 one can remove all black dots, one after the other, of the five left “islands”; then one can remove all black dots, one after the other, of the right “island”, thus changing one green dot to black. QED.
+So (3) is proven for `(n,m) = (9,2)` and `(n,m) = (12,3)`. But the bigger anchor pairs are built from these “starting” anchor points. This completes the proof. - In figure 7 one can remove all black dots, one after the other, of the five left “islands”; then one can remove all black dots, one after the other, of the right “island”, thus changing one green dot to black. QED.
 
 (3) is shown graphically in figure 8:
 
