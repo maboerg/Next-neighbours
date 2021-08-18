@@ -265,7 +265,7 @@ In the sections above we got results for `c`. The formulae given below for `a` a
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`c(m)` is the (best presently known) lower bound for `d(m)`.
 
 **`b(n)  = min m`, minimum taken over working pairs `(n,m)`**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`b(m)=` minimal number of vertices with `indegree > 0`, minimum taken over all possible `G` with `n` vertices
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`b(n)=` minimal number of vertices with `indegree > 0`, minimum taken over all possible `G` with `n` vertices
 
 **`a(n) = min m`, minimum taken over _proven_ working pairs `(n,m)`**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(2) = a(3) = 2`\
