@@ -269,8 +269,11 @@ In the sections above we got results for `c`. The formulae given below for `a` a
 
 **`a(n) = min m`, minimum taken over _proven_ working pairs `(n,m)`**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(2) = a(3) = 2`\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(n) = 2j for n = 9j-5 ... 9j, j = 1,2,3...`\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(n) = 2j+1 for n = 9j+1 ... 9j+3, j = 1,2,3...`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(n) = 2j for n = 9j-5 ... 9j, j >= 1`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(n) = 2j+1 for n = 9j+1 ... 9j+3, j >= 1`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or with `h=(n+5)/9` for `n>3`:\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(n) = 2 floor(h) if h-floor(h)<2/3`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(n) = 2 floor(h)+1 else`\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a` is (not strictly) increasing.\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a = (2,2,2,2,2,2,2,2,3,3,3,4,4,4,4,4,4,5,5,5,6,6,6,6,6,6,7,7,7,8, ...)`, beginning at `n=2`\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The sequence `a` is the “inverse” of `c`.\
