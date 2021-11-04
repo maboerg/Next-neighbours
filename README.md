@@ -279,6 +279,11 @@ In the sections above we got results for `c`. The formulae given below for `a` a
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The sequence `a` is the “inverse” of `c`.\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a(n)` is the (best presently known) upper bound for `b(n)`.
 
+#### OEIS
+
+`a(n)` is the sequence [A347941](http://oeis.org/A347941) in OEIS.\
+`c(m)` is the sequence [A261953](http://oeis.org/A261953) for `m > 1` in OEIS.
+
 #### The open problem
 
 Is `a(n) = b(n)` and `c(m) = d(m)`? If "yes" the _Next Neighbour Problem_ would be solved.
